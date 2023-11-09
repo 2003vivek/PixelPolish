@@ -50,6 +50,6 @@ $ python index.py
 MIT
 
 ---
-> GitHub [2003vivek](https://github.com/amitmerchant1990) &nbsp;&middot;&nbsp;
+> GitHub [2003vivek](https://github.com/2003vivek) &nbsp;&middot;&nbsp;
 
 
