@@ -3,8 +3,7 @@
 <h1 align="center">
   <br>
  <img src="![0a91a1b201274a0e8c87ecae08c7cf9f](https://github.com/2003vivek/PixelPolish/assets/109408315/4367cd4d-1977-4072-9ebf-08b204ff492f)"
-
-/amitmerchant1990/electron-markdownify/master/app/img/markdownify.png" alt="PixelPolish" width="200"></a>
+ width="200">
   <br>
   PixelPolish
   <br>
