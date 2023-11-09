@@ -41,17 +41,15 @@ $ python index.py
 
 ## You may also like...
 
-- [Pomolectron](https://github.com/2003vivek/velevet-voice) - A Chatting website.
-- [Correo](https://github.com/2003vivek/The-Future-Words) - A Next Word predictor AI model.
-- [Correo](https://github.com/2003vivek/Quants) - Various AlgoTrading Strategies.
+- [Velvet-Voice](https://github.com/2003vivek/velevet-voice) - A Chatting website.
+- [The-Future-Word](https://github.com/2003vivek/The-Future-Words) - A Next Word predictor AI model.
+- [AlgoTrading](https://github.com/2003vivek/Quants) - Various AlgoTrading Strategies.
 
 ## License
 
 MIT
 
 ---
-
-> [amitmerchant.com](https://www.amitmerchant.com) &nbsp;&middot;&nbsp;
-> GitHub [@amitmerchant1990](https://github.com/amitmerchant1990) &nbsp;&middot;&nbsp;
+> GitHub [2003vivek](https://github.com/amitmerchant1990) &nbsp;&middot;&nbsp;
 
 
