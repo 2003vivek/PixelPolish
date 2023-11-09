@@ -2,7 +2,7 @@
 
 <h1 align="center">
   <br>
- <img src="[![0a91a1b201274a0e8c87ecae08c7cf9f](https://github.com/2003vivek/PixelPolish/assets/109408315/4367cd4d-1977-4072-9ebf-08b204ff492f)](https://us.123rf.com/450wm/mdranahamid/mdranahamid2101/mdranahamid210100194/161577236-initial-pp-letter-logo-creative-typography-vector-template-creative-circle-letter-pp-logo-vector.jpg?ver=6)"
+ <img src="(https://us.123rf.com/450wm/mdranahamid/mdranahamid2101/mdranahamid210100194/161577236-initial-pp-letter-logo-creative-typography-vector-template-creative-circle-letter-pp-logo-vector.jpg?ver=6)"
  width="200">
   <br>
   PixelPolish
