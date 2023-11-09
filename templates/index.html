@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QuickyEdit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+
+:root {
+    --card-height: 300px;
+    --card-width: calc(var(--card-height) / 1.5);
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    /* width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    background: #191c29;
+  }
+  .card1 {
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 36px;
+    perspective: 2500px;
+    margin: 0 50px;
+  }
+  
+  .cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .wrapper {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .card1:hover .wrapper {
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  }
+  
+  .wrapper::before,
+  .wrapper::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+  }
+  .wrapper::before {
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(
+      to top,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%
+    );
+  }
+  .wrapper::after {
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(
+      to bottom,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%
+    );
+  }
+  
+  .card1:hover .wrapper::before,
+  .wrapper::after {
+    opacity: 1;
+  }
+  
+  .card1:hover .wrapper::after {
+    height: 120px;
+  }
+  .title {
+    width: 100%;
+    transition: transform 0.5s;
+  }
+  .card1:hover .title {
+    transform: translate3d(0%, -50px, 100px);
+  }
+  
+  .character {
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  .card1:hover .character {
+    opacity: 1;
+    transform: translate3d(0%, -30%, 100px);
+  }
+  .card1{
+    margin-bottom: 3rem;
+    
+  }
+  .cover-image{
+    max-height: 18rem;
+    max-width: 30rem;
+  }
+
+  .drop-container {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px dashed #555;
+  color: #444;
+  cursor: pointer;
+  transition: background .2s ease-in-out, border .2s ease-in-out;
+}
+
+.drop-container:hover {
+  background: #eee;
+  border-color: #111;
+}
+
+.drop-container:hover .drop-title {
+  color: #222;
+}
+
+.drop-title {
+  color: #444;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  transition: color .2s ease-in-out;
+}
+#heading{
+  color:whitesmoke;
+}
+  
+    </style>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-info p-3">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">QuickyEdit</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto ">
+              <li class="nav-item">
+                <a class="nav-link mx-2 active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="#">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="#">Pricing</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Company
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Blog</a></li>
+                  <li><a class="dropdown-item" href="#">About Us</a></li>
+                  <li><a class="dropdown-item" href="#">Contact us</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
+              <li class="nav-item mx-2">
+                <a class="nav-link text-dark h5" href="" target="blank"><i class="fab fa-google-plus-square"></i></a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-dark h5" href="" target="blank"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-dark h5" href="" target="blank"><i class="fab fa-facebook-square"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        
+        {% for message in messages  %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>Success!</strong> {{ message | safe }}.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        
+      {% endif %}
+    {% endwith %}
+    
+
+      <div class="container my-4">
+
+        <h2 class="my-4" id="heading">QuickyEdit-- The only AI solution to edit your photos</h2>
+        <form action="/edit" method="post" enctype="multipart/form-data">
+            <!-- <div class="mb-3">
+                <label for="formFile" class="form-label">Select Your File</label>
+                <input class="form-control" type="file" name="file" id="formFile">
+              </div> -->
+              <label for="images" class="drop-container" id="dropcontainer">
+                <span class="drop-title">Drop files here</span>
+                or
+                <input type="file" id="images" name="file"  required>
+              </label>
+
+              <div class="form-floating my-4">
+                <select class="form-select" id="floatingSelect" name="operation" aria-label="Floating label select example">
+                  <option selected>Select Operations For your Image</option>
+                  <option value="cpng">Convert To PNG</option>
+                  <option value="cgray">Convert To Gray</option>
+                  <option value="ccolor">Convert To Colored</option>
+                  <option value="cwebp">Convert To Webp</option>
+                  <option value="cjpg">Convert To JPG</option>
+                  <option value="cCartoonize">Cartoonize Image</option>
+                </select>
+                <!-- <label for="floatingSelect">Works with selects</label> -->
+              </div>
+
+              <button type="submit" class="btn btn-success my-2">Submit</button>
+        </form>
+        
+        <!-- <a href="https://www.mythrillfiction.com/the-dark-rider" alt="Mythrill" target="_blank"> -->
+          <div class="card1">
+            <div class="wrapper">
+              <img src="https://w0.peakpx.com/wallpaper/301/770/HD-wallpaper-black-joker-black-joker-smoke-dark-dark-joker-joker-laugh-joker-smoke.jpg" class="cover-image" />
+            </div>
+            <!-- <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png" class="title" /> -->
+            <img src="https://i.pinimg.com/550x/90/c9/d3/90c9d327f794b9e6be7c1dfc1aec8fa7.jpg" class="character" />
+          </div>
+       
+        
+        <!-- <a href="https://www.mythrillfiction.com/force-mage" alt="Mythrill" target="_blank"> -->
+          <div class="card1">
+            <div class="wrapper">
+              <img src="https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg" class="cover-image" />
+            </div>
+            <!-- <img src="https://ggayane.github.io/css-experiments/cards/force_mage-title.png" class="title" /> -->
+            <img src="https://ggayane.github.io/css-experiments/cards/force_mage-character.webp" class="character" />
+          </div>
+       
+
+      </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
