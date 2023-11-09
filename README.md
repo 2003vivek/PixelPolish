@@ -2,7 +2,7 @@
 
 <h1 align="center">
   <br>
- <img src="(https://us.123rf.com/450wm/mdranahamid/mdranahamid2101/mdranahamid210100194/161577236-initial-pp-letter-logo-creative-typography-vector-template-creative-circle-letter-pp-logo-vector.jpg?ver=6)"
+ <img src="https://us.123rf.com/450wm/mdranahamid/mdranahamid2101/mdranahamid210100194/161577236-initial-pp-letter-logo-creative-typography-vector-template-creative-circle-letter-pp-logo-vector.jpg?ver=6"
  width="200">
   <br>
   PixelPolish
