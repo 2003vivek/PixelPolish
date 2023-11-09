@@ -2,9 +2,10 @@
 
 <h1 align="center">
   <br>
-  <a href="http://www.amitmerchant.com/electron-markdownify"><img src="https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.png" alt="Markdownify" width="200"></a>
+  <a href="http://www.amitmerchant.com/electron-markdownify"><img src="https://raw.githubusercontent.com![0a91a1b201274a0e8c87ecae08c7cf9f](https://github.com/2003vivek/PixelPolish/assets/109408315/9061b254-736c-4b41-8e56-1c6d03465b6a)
+/amitmerchant1990/electron-markdownify/master/app/img/markdownify.png" alt="Markdownify" width="200"></a>
   <br>
-  Markdownify
+  PixelPolish
   <br>
 </h1>
 
